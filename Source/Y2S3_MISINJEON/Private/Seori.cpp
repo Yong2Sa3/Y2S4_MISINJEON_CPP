@@ -35,22 +35,6 @@ void ASeori::Tick(float DeltaTime)
 
 }
 
-
-// 체력 감소 함수 (TakeDamage 함수 구현) 
-void ASeori::TakeDamage(int DamageAmount)
-{
-	HP -= DamageAmount;
-	if (HP < 0)
-	{
-		HP = 0;
-	}
-
-	// 블루프린트에서 구현된 함수 호출
-	UpdateHealthUI(HP);
-}
-
-
-
 // Called to bind functionality to input
 void ASeori::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
